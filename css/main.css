@@ -4,13 +4,13 @@
 
 :root {
     --pri-color: rgb(9, 9, 36);
-    --sec-color: rgb(94, 94, 129);
+    --sec-color: rgb(23, 98, 117);
 }
 
 body {
     background-color: var(--pri-color);
     margin: 0;
-    padding; 0;
+    padding: 0;
 }
 
 header {
@@ -45,8 +45,8 @@ header form input::placeholder {
 }
 
 header img {
-    height: 95%;
     margin-left: 2em;
+    width: 150px;
 }
 
 main {
@@ -108,9 +108,19 @@ main {
     transform: translateY(0);
 }
 
+footer {
+    background-color: var(--sec-color);
+    height: 85px;
+    margin-top: 1em;
+}
+
 @media only screen and (max-width: 750px) {
     .movie {
         width: 275px;
+    }
+
+    header img {
+        width: 100px;
     }
 }
 
