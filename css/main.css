@@ -1,5 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --pri-color: rgb(9, 9, 36);
+    --sec-color: rgb(94, 94, 129);
+}
+
+body {
+    background-color: var(--pri-color);
+    margin: 0;
+    padding; 0;
+}
+
 header {
-    min-height: 250px;
-    min-width: 100%;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: var(--sec-color);
+    padding-right: 1em;
+}
+
+header h1 {
+    margin: 0 0 0 1em;
+    color: white;
+}
+
+header form input {
+    padding: 0.5em 1em;
+    background-color: transparent;
+    border: 1px solid var(--pri-color);
+    border-radius: 30px;
+    margin-right: 1em;
+    color: rgb(199, 198, 198);
+}
+
+header form input:focus {
+    outline: none;
+}
+
+header form input::placeholder {
+    color: rgb(199, 198, 198);
+}
+
+header img {
+    height: 95%;
+    margin-left: 2em;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.movie {
+    width: 30%;
+    background-color: var(--sec-color);
+    position: relative;
+    overflow: hidden;
+    margin-top: 2em;
+    border-radius: 3px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.info h3, .info span {
+    margin: 0;
+}
+
+.info h3 {
+    margin-left: 1em;
+    color: #fff;
+}
+
+.info span {
+    margin-right: 1em;
+    padding: 1em;
+    background-color: var(--sec-color);
+    border-radius: 3px;
+}
+
+.overview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(101%);
+    background-color: #fff;
+    transition: transform 0.5s ease;
+    padding: 1em;
+    max-height: 100%;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 750px) {
+    .movie {
+        width: 275px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .movie {
+        width: 22%;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .movie {
+        width: 16%;
+    }
 }
